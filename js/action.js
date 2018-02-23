@@ -26,11 +26,12 @@ function showKeyboardData(e) {
   var code = $event.charCode || $event.keyCode;
   var $character = document.getElementById('character'),
       $code = document.getElementById('code');
-
+      
   switch(code) {
     case 13:
-      char = 'enter';
-      break;
+      char = 'enter'; break;
+    case 32:
+      char = 'espacio'; break;
     default:
       char = String.fromCharCode(code);
   }
